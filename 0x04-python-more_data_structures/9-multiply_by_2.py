@@ -2,6 +2,6 @@
 def multiply_by_2(a_dictionary):
     result = {}
     for key in a_dictionary:
-        result = (a_dictionary[k] * 2)
+        result = (a_dictionary[key] * 2)
 
     return result
