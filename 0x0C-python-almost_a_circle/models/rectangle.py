@@ -30,6 +30,29 @@ class Rectangle(Base):
             raise ValueError('width must be > 0')
         self.__width = value
 
+    @property
+    def height(self):
+        """comment"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """comment"""
+        if type(value) is not int:
+            raise TypeError('height must be an integer')
+        if value <= 0:
+            raise ValueError('height must be > 0')
+        self.__height = value
+        
     def area(self):
         """comment"""
         return (self.width * self.height)
+
+    def display(self):
+        """comment"""
+        string = ""
+        for i in range(self.y):
+            print()
+        for i in range(self.__height):
+            string = string + (" " * self.x) + ("#" * self.__width) + "\n"
+        print(string[:-1])
