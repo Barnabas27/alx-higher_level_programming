@@ -1,19 +1,31 @@
 #!/usr/bin/python3
-""" Module: rectangle """
+"""Class Rectangle"""
+
+
 from models.base import Base
+import json
+
 
 class Rectangle(Base):
-    '''class Rectangle inherits from base
-    '''
-    KV_dict = {'id': 'id', 'width': '_Rectangle__width',
-               'height': '_Rectangle__height',
-               'x': '_Rectangle__x', 'y': '_Rectangle__y'}
-
+    """comment"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''method __init__ Initialization a Rectangle
-        '''
-        super().__init__(id)
+        """comment"""
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
+
+    @property
+    def width(self):
+        """comment"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """comment"""
+        if type(value) is not int:
+            raise TypeError('width must be an integer')
+        if value <= 0:
+            raise ValueError('width must be > 0')
+        self.__width = value
