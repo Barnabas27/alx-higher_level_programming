@@ -73,3 +73,13 @@ class Rectangle(Base):
                 setattr(self, attributes[i], args[i])
         for k, v in kwargs.items():
             setattr(self, k, v)
+
+    def to_dictionary(self):
+        """comment"""
+        dictionary = {}
+        dictionary['x'] = self.x
+        dictionary['y'] = self.y
+        dictionary['id'] = self.id
+        dictionary['height'] = self.height
+        dictionary['width'] = self.width
+        return dictionary
