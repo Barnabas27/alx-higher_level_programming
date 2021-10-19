@@ -56,3 +56,11 @@ class Rectangle(Base):
         for i in range(self.__height):
             string = string + (" " * self.x) + ("#" * self.__width) + "\n"
         print(string[:-1])
+
+
+    def __str__(self):
+        """comment"""
+        string = "[Rectangle] (" + str(self.id) + ") "
+        string = string + str(self.x) + "/" + str(self.y)
+        string = string + " - " + str(self.width) + "/" + str(self.height)
+        return string
