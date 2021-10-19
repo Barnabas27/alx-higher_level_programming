@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Class Rectangle"""
 
-
-from models.base import Base
 import json
+from models.base import Base
+
 
 
 class Rectangle(Base):
