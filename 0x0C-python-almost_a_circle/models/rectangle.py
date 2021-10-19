@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Class Rectangle"""
 
+
 import json
 from models.base import Base
-
 
 
 class Rectangle(Base):
@@ -56,7 +56,6 @@ class Rectangle(Base):
         for i in range(self.__height):
             string = string + (" " * self.x) + ("#" * self.__width) + "\n"
         print(string[:-1])
-
 
     def __str__(self):
         """comment"""
