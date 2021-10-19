@@ -64,3 +64,12 @@ class Rectangle(Base):
         string = string + str(self.x) + "/" + str(self.y)
         string = string + " - " + str(self.width) + "/" + str(self.height)
         return string
+
+    def update(self, *args, **kwargs):
+        """comment"""
+        attributes = ["id", "width", "height", "x", "y"]
+        if args and len(args) > 0:
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        for k, v in kwargs.items():
+            setattr(self, k, v)
