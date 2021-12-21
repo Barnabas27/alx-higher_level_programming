@@ -8,12 +8,12 @@ module.exports = class Rectangle {
   }
 
   print () {
-    let sides = '';
+    let xs = '';
     for (let j = 0; j < this.width; j++) {
-      sides = 'X';
+      xs += 'X';
     }
     for (let i = 0; i < this.height; i++) {
-      console.log(sides);
+      console.log(xs);
     }
   }
 };
