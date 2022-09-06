@@ -1,8 +1,3 @@
 #!/usr/bin/node
-const myLangs = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-
-let i = 0;
-while (i < myLangs.length) {
-  console.log(myLangs[i]);
-  i++;
-}
+const arr = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+arr.forEach(element => console.log(element));
